@@ -1,0 +1,30 @@
+{
+  "home": {
+    "1": "Give merch,",
+    "2": "which is chosen by the people"
+  },
+  "header": {
+    "home": "home",
+    "models": "models",
+    "service": "service",
+    "contacts": "contacts"
+  },
+  "main": {
+    "1": "WE CREATE",
+    "2": "AND WE SEW THE MERCH",
+    "3": "INDIVIDUALLY FOR COMPANIES AND PUBLIC PEOPLE",
+    "4": "WE PROVIDE A READY STORE",
+    "5": "MERCU",
+    "6": "A SERVICE WHERE EMPLOYEES ORDER WHAT THEY WANT"
+  },
+  "button": {
+    "anorak": "ANORAK “MULTICOLOR” >>>>>>>>>>>>>>> MORE DETAILS"
+  },
+  "banner": {
+    "1": "DETERMINE",
+    "2": "EXACTLY*",
+    "3": "MERCH COST ONLINE",
+    "4": "* - IT WILL REALLY MATCH THE FINAL + WE PROMISE EVERYTHING WILL WORK WITHOUT SMS AND REG...",
+    "calc": "CALCULATOR"
+  }
+}

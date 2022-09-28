@@ -1,0 +1,41 @@
+{
+  "name": "merchdone",
+  "version": "0.1.0",
+  "private": true,
+  "vuePlugins": {
+    "service": [
+      "build.prerender.js"
+    ]
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build:prerender --no-clean"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "prerender-spa-plugin": "^3.4.0",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.17.3",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@intlify/vue-i18n-loader": "^1.0.0",
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-plugin-pwa": "~4.5.13",
+    "@vue/cli-plugin-router": "~4.5.13",
+    "@vue/cli-plugin-vuex": "~4.5.13",
+    "@vue/cli-service": "~4.5.13",
+    "node-sass": "^4.12.0",
+    "raw-loader": "^4.0.1",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-i18n": "~1.0.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
