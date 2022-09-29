@@ -5,6 +5,7 @@
   },
   "header": {
     "home": "home",
+    "calc": "calculator",
     "models": "models",
     "service": "service",
     "contacts": "contacts"
@@ -18,7 +19,9 @@
     "6": "A SERVICE WHERE EMPLOYEES ORDER WHAT THEY WANT"
   },
   "button": {
-    "anorak": "ANORAK “MULTICOLOR” >>>>>>>>>>>>>>> MORE DETAILS"
+    "anorak": "ANORAK “MULTICOLOR” >>>>>>>>>>>>>>> MORE DETAILS",
+    "anorak-black": "ANORAK “BLACK AND WHITE” >>>>>>>>>>>>>>> MORE DETAILS",
+    "t-short": "TURQUOISE “T-SHIRT” >>>>>>>>>>>>>>>> MORE DETAILS"
   },
   "banner": {
     "1": "DETERMINE",
@@ -26,5 +29,26 @@
     "3": "MERCH COST ONLINE",
     "4": "* - IT WILL REALLY MATCH THE FINAL + WE PROMISE EVERYTHING WILL WORK WITHOUT SMS AND REG...",
     "calc": "CALCULATOR"
+  },
+  "calc": {
+    "1": "TYPE OF CLOTHING",
+    "2": "QUANTITY",
+    "3": "APPLICATION",
+    "4": "MODEL",
+    "5": "FORM OF PAYMENT",
+    "step1": {
+      "1": "T-SHIRT",
+      "2": "SKINNY",
+      "3": "SWEATSHIRT",
+      "4": "PLANK",
+      "5": "JACKET OR RAINCOAT",
+      "6": "WAISTCOAT",
+      "7": "PANAMA",
+      "8": "SHOPPER",
+      "9": "PIN (ICON)",
+      "10": "BOMBER",
+      "11": "SHOPPER",
+      "12": "SOMETHING OF YOUR OWN"
+    }
   }
 }

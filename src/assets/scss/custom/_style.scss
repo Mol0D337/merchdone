@@ -15,9 +15,10 @@
     right: 0;
     top: 0;
     bottom: 150px;
-    z-index: -1;
-    background-image: url("~@/assets/image/anorak.png");
+    user-select: none;
     background-size: cover;
+    background-position: center;
+    transition: all 1.5s;
   }
 }
 
@@ -28,6 +29,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
+  position: relative;
+  z-index: 10;
   &__left {
     width: calc(50% - 50px);
     display: flex;
@@ -100,6 +103,145 @@
     line-height: 60px;
     color: $dark;
   }
+  &_subtitle {
+    padding: 0 50px 50px 50px;
+    font-family: eUkraineHead, Arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: $dark;
+    width: 580px;
+  }
+}
+
+.calc {
+  &__about {
+    font-family: eUkraineHead, Arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: $dark;
+    margin-bottom: 50px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    &_title {
+      padding: 50px 50px 20px 50px;
+      font-family: eUkraineHead, Arial;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 60px;
+      color: $dark;
+    }
+    &_subtitle {
+      padding: 0 50px 50px 50px;
+      font-family: eUkraineHead, Arial;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 35px;
+      color: $dark;
+      width: 80%;
+    }
+    &_left {
+      width: 50%;
+    }
+    &_right {
+      width: 50%;
+      background-color: $green;
+      margin-right: 50px;
+      display: flex;
+      justify-content: space-between;
+      &--top {
+        font-family: eUkraine, Arial;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        color: $dark;
+        border-bottom: 3px solid $dark;
+        padding: 20px 50px;
+      }
+      &--bottom {
+        font-family: eUkraine, Arial;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        color: $dark;
+        display: flex;
+        padding: 30px 50px 15px 50px;
+        &-sub {
+          font-family: eUkraine, Arial;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: $dark;
+          padding: 25px 50px 30px 50px;
+        }
+      }
+      &--left {
+        width: 50%;
+        button {
+          margin: 20px 50px 30px 50px;
+          width: 80%;
+        }
+      }
+      &--right {
+        width: 50%;
+        div:first-child {
+          display: flex;
+          align-items: center;
+          padding-right: 85px;
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding: 0 50px;
+  }
+  &__select {
+    //margin: 50px 0;
+    margin: 43.5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__svg--active {
+    stroke: $green;
+    fill: $green;
+  }
+  &__options {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: eUkraine, Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: $dark;
+    background-color: $gray;
+    transition: background-color 0.3s;
+    &--active {
+      background: $green;
+    }
+
+  }
+  &__step {
+    &--1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 }
 
 .button {
@@ -119,6 +261,29 @@
     letter-spacing: 0.1em;
     color: $dark;
     cursor: pointer;
+    outline: none;
+    transition: all 0.5s;
+    &--calc {
+      font-family: eUkraine, Arial;
+      font-size: 24px;
+      line-height: 35px;
+      margin-bottom: 40px;
+      flex-basis: 30%;
+      &-green {
+        border: none;
+        background-color: $green;
+      }
+    }
+    &--small {
+      width: 50%;
+      height: 50px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &:hover {
+      background-color: $dark;
+      color: $green;
+    }
   }
   &_green {
     display: flex;
@@ -129,7 +294,8 @@
     width: 320px;
     height: 80px;
     background: $green;
-    border: 3px solid $white;
+    border: none;
+    outline: none;
     font-family: eUkraine, Arial;
     font-style: normal;
     font-weight: 400;
@@ -137,19 +303,38 @@
     line-height: 26px;
     color: $dark;
     cursor: pointer;
+    transition: all 0.5s;
+    z-index: 10;
+    &:hover {
+      background-color: $dark;
+      color: $green;
+    }
   }
   &__big {
     display: flex;
     align-items: center;
     padding: 50px;
+    outline: none;
     border: 3px solid $green;
     border-bottom: none;
     cursor: pointer;
+    transition: background-color 0.5s;
     &:last-child {
       border-bottom: 3px solid $green;
     }
     svg {
       margin-right: 25px;
+    }
+    &:hover {
+      background-color: $green;
+      .active {
+        animation: animatedBorderHover 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+        background-image: linear-gradient(
+                        transparent 65%,
+                        $white 90%,
+                        transparent 95%,
+        );
+      }
     }
     &_title {
       text-transform: uppercase;
@@ -243,6 +428,11 @@
   align-items: flex-start;
   svg {
     cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      fill: $dark;
+      stroke: $dark;
+    }
     &:first-child {
       margin-right: 30px;
     }
@@ -271,5 +461,103 @@
 @keyframes animatedBorder {
   to {
     background-size: 100% 100%;
+  }
+}
+
+@keyframes animatedBorderHover {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.footer {
+  width: 100vw;
+  background-color: $green;
+  height: 150px;
+  padding: 0 50px;
+  display: grid;
+  grid-template: 1fr / 2fr 1fr 2fr 1fr;
+  align-items: center;
+  &--mt-20 {
+    margin-top: 20px;
+  }
+  &--mt-5 {
+    margin-top: 5px;
+  }
+  &-link {
+    font-family: eUkraine, Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: $dark;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    & + .router-link-exact-active {
+      background-image: none !important;
+    }
+  }
+}
+
+.contacts {
+  height: calc(100vh - 300px);
+  background-color: $black;
+  display: grid;
+  grid-template: 1fr / 2fr 1fr 3fr;
+  align-items: center;
+  padding: 0 50px;
+  img {
+    width: 30vw;
+  }
+  &__author {
+    font-family: eUkraineHead, Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: $green;
+    margin-bottom: 40px;
+    margin-top: 50%;
+  }
+  &__text {
+    font-family: eUkraine, Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $white;
+  }
+  &__title {
+    font-family: eUkraineHead, Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 60px;
+    color: $white;
+    &_green {
+      color: $green;
+      margin: 70px 0;
+    }
+  }
+  &__subtitle {
+    font-family: eUkraineHead, Arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: $white;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

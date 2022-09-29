@@ -29,19 +29,7 @@
         </main>
       </div>
     </div>
-    <div class="container__right">
-      <div class="slider">
-        <div>
-          <svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.0001 39.5001L40.5001 77.0001M3.0001 39.5001L40.5001 2.00012M3.0001 39.5001L78.3179 39.5001" stroke="#C4FF33" stroke-width="4"/>
-          </svg>
-          <svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M75.3178 39.5L37.8178 2M75.3178 39.5L37.8178 77M75.3178 39.5H0" stroke="#C4FF33" stroke-width="4"/>
-          </svg>
-        </div>
-        <button class="button_green">{{ $t('button.anorak') }}</button>
-      </div>
-    </div>
+    <Slider />
     <Banner />
   </div>
 </template>
@@ -49,9 +37,10 @@
 <script>
 import Header from "@/components/Header.vue";
 import Banner from "@/components/Banner.vue";
+import Slider from "@/components/Slider.vue";
 
 export default {
   name: 'Home',
-  components: {Header, Banner},
+  components: {Header, Banner, Slider},
 }
 </script>

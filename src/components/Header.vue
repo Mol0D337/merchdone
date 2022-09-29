@@ -16,7 +16,8 @@
         <path d="M17.0705 28.4243L16.2462 29.5277L16.1 29.7272L8.93409 39.4058L8.78785 39.3127L2.64565 35.0451L2.59247 35.0185L0.265878 33.3965L0.239288 30.9503L0.279173 30.9237L1.15663 30.3653H1.16992L8.18958 35.2046L8.4023 35.3376L8.54854 35.1381L13.5607 28.411L13.7069 28.1983L14.478 27.1745L17.0705 28.4243Z" fill="#313131"/>
         <path d="M13.3347 28.2913L8.33589 35.0052L1.396 30.2191C3.32374 28.9694 5.54398 27.5335 5.79658 27.4139H5.80987C5.83646 27.6399 5.88964 27.8526 5.98271 28.0653C6.12895 28.411 6.32837 28.7168 6.60756 28.9827C6.87346 29.2486 7.19253 29.448 7.55149 29.5942C7.91045 29.7405 8.296 29.8069 8.68155 29.8069C9.0671 29.8069 9.45265 29.7405 9.81161 29.5942C10.1706 29.448 10.4896 29.2486 10.7555 28.9827C11.0214 28.7168 11.2342 28.411 11.3804 28.0653C11.4602 27.8526 11.5266 27.6399 11.5532 27.4139H11.5798C11.7128 27.4538 12.4307 27.826 13.3347 28.2913Z" fill="#C4FF33"/>
       </svg>
-      <router-link tag="div" class="header_item" to="/">{{ $t('header.home') }}</router-link>
+      <router-link v-if="$route.path === '/'" tag="div" class="header_item" to="/">{{ $t('header.home') }}</router-link>
+      <router-link v-else tag="div" class="header_item" to="/calculator">{{ $t('header.calc') }}</router-link>
       <router-link tag="div" class="header_item" to="/models">{{ $t('header.models') }}</router-link>
       <router-link tag="div" class="header_item" to="/service">{{ $t('header.service') }}</router-link>
       <router-link tag="div" class="header_item" to="/contacts">{{ $t('header.contacts') }}</router-link>
@@ -63,6 +64,7 @@
         return this.locale = !this.locale
       },
       setLocale(locale) {
+        this.$emit('setLocale', locale)
         import(`../locales/${locale}.json`).then((msgs) => {
           this.$i18n.setLocaleMessage(locale, msgs);
           this.$i18n.locale = locale;

@@ -13,7 +13,7 @@
       </div>
     </div>
     <div>
-      <button class="button_white" @click="routeCalc">{{ $t('banner.calc') }}</button>
+      <button class="button_white" @click="$router.push('/calculator')">{{ $t('banner.calc') }}</button>
     </div>
   </div>
 </template>
@@ -21,11 +21,6 @@
 <script>
   export default {
     name: "Banner",
-    methods: {
-      routeCalc() {
-        this.$router.push('/calculator')
-      }
-    }
   }
 </script>
 
